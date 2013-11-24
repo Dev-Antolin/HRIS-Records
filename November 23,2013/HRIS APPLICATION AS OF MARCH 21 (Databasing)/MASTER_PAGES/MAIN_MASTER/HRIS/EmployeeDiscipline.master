@@ -1,0 +1,258 @@
+﻿<%@ Master Language="VB" CodeFile="EmployeeDiscipline.master.vb" Inherits="MasterPage"%>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HR RECORD Master Page</title>
+       
+   <script src="../../../js/sitemasterpage.js" type="text/javascript"></script>
+
+    <script src="../../../js/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+    <script src="../../../js/jquery.jclock.js" type="text/javascript"></script>
+
+
+    <link href="../../../CSS_FILES/style.css" rel="stylesheet" type="text/css" />
+    
+
+    <style type="text/css">
+        .style1
+        {
+            width: 99%;
+        }
+    </style>
+    
+
+</head>
+<body>
+    
+        <form style="margin:0 auto; width: 1023px;" id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+        <div id="wrapper" style="width:1022px;">
+            <div id="header">
+            
+                    <div style="float:right; width:250px;height:20px; margin-top:70px; font-weight:bold; font-family: Arial;"><%-- top label--%>
+                        <div style="padding-top:6px; position: absolute; font-size: .7em; margin-top:3px;">
+                            <asp:Label ID="lblWelcomeMod" runat="server" Text="Welcome" Font-Size="Medium"></asp:Label>
+
+                        </div>
+                         <div style="position:absolute; float:left; margin-left:110px; margin-top:8px;">
+                                <a style="color:Blue; font-size: .9em;" href="#">Account</a>
+                         </div>
+                     
+                     
+                        <div style="z-index: 1; position:absolute; left:950px; padding-top:9px;">
+                            <asp:Image ID="Image13" runat="server" Height="17px" 
+		                          ImageUrl="~/images/top divider.png" Width="2px" />   
+                        </div>
+                        
+                         <div style="position:absolute; float:left; margin:8px 0 0 188px; top: 70px;">
+                                <a style="color:Blue; font-size: .9em;" href="#">Logout</a>
+                         </div>
+                    
+        
+                    </div><%-- end of top label--%>
+                    <br />
+                    <br />
+                <ul style="margin-top:-0px;">
+                <li style="margin-left:100px;">
+                    <asp:ImageButton ID="btnEmployee" runat="server" 
+                        ImageUrl="~/images/btnMenuEmployee.jpg" /></li>
+				    <%--<li id="active" style="margin-left:115px; height:28px; width:129px;"><a href="../../../WEB_PAGES/RECORDS/HRMD/HREMPLOYEERECORDPage.aspx">Employee</a></li> --%>
+				    <li><asp:ImageButton ID="btnmanager" runat="server" 
+                        ImageUrl="~/images/dismanager.jpg" /></li>
+				    <li><asp:ImageButton ID="btnHRMD" runat="server" 
+                        ImageUrl="~/images/dishrmd.jpg" /></li>
+				    <li><asp:ImageButton ID="btnLegal" runat="server" 
+                        ImageUrl="~/images/dislegal.jpg" /></li> 
+			    </ul>
+            </div>
+            
+            <div id="mainMenu"> 
+			    <ul style="margin-top:3px; margin-left:100px; width:755px;">
+			        <li class="button">
+                        <asp:ImageButton ID="btnRecords" runat="server" 
+                        ImageUrl="~/images/btn1.jpg" /></li>
+                    <li class="button">
+                        <asp:ImageButton ID="btnPayroll" runat="server" 
+                            ImageUrl="~/images/btn2.jpg" /></li>
+                    <li class="button">
+                        <asp:ImageButton ID="btnDiscipline" runat="server" 
+                            ImageUrl="~/images/btn3Hover.jpg" /></li>	      
+			    </ul>
+		    </div>
+           
+            <div id="content" style=" margin-bottom:10px;"><%-- content --%>
+                <div style="margin-left:3px;" class="column">
+                     <%-- end of Employee Data --%>
+    	
+		            <%-- end of Reports image --%> 
+    		          
+		              <%-- end of Reports sub menu anchor--%> 
+    		 		 
+		 		      <div style="padding:10px 0 0 3px; height: 384px;"><%-- Alerts image --%>
+		 		            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">  
+                </asp:ContentPlaceHolder>    		       
+		              </div><%-- end of Alerts image--%>
+    		          
+    		   		          
+		              <div style="margin-left:2px; padding:15px 0 10px 0;"><%--divider for bottom--%>
+		 		 	        <asp:Image ID="Image9" runat="server" ImageUrl="~/images/divider3.png" 
+                                 Height="1.5px" Width="198px" />
+		              </div>  
+    		          		          
+		              <div style=" margin-left:2px;padding:5px 0 1px 2px; width:194px; font-size:.8em; height:71px; position:relative; top: 0px; left: 0px;"><%-- bottom logo div --%>
+    		              
+    		              <div style="width:189px; height:21px;"><%-- calendar div--%>
+        		             <asp:Image style="float:left; margin:0 9px 0 2px;" ID="Image10" runat="server" ImageUrl="~/Images/calendar.PNG" />
+        		            
+        		             <div id="jclock2" style="width:180px; margin-left:28px; height:21px;">
+        		             <asp:Label runat="server" Font-Bold="True" ID="lbltime2" Width="171px" 
+                                     Height="16px" Font-Names="Arial" Font-Size="11px" ForeColor="Black"></asp:Label>
+        		             </div>
+    		              </div><%-- end of calendar div --%>
+        		          
+        		          <div style="width:189px; height:21px; margin-top:2px;">
+        		                <asp:Image style="float:left; margin-right:7px;" ID="Image11" runat="server" ImageUrl="~/Images/clock.PNG" />
+     		                
+        		               <div id="jclock1" style="padding-top:3px; width:185px; height:21px; ">
+        		                   <script type="text/javascript">
+
+                                    function ShowTime()
+	                                       {
+
+                                               	var dt = new Date();
+                                            	document.getElementById("<%= txttime.ClientID %>").value = dt.toLocaleTimeString();
+                                              	window.setTimeout("ShowTime()", 1000);
+                                           }  
+                                    </script>
+
+                                    <asp:TextBox ID="txttime" runat="server" BackColor="#F1EFEF" BorderWidth="0px" Font-Names="Arial"
+	                                        Font-Size="11px" ForeColor="Black" Font-Bold="True" ReadOnly="True"></asp:TextBox>
+
+
+                                    <script type="text/javascript">
+                                      // a startup script to put everything in motion
+                                      window.setTimeout("ShowTime()", 1000);
+                                    </script>
+        		                </div>
+        		                
+    		              </div>
+    		              
+    		              <div style="width:134px; height:21px; margin-top:2px;">
+        		                <asp:Image style="float:left; margin-right:5px;" ID="imghome" runat="server" ImageUrl="~/Images/home.PNG" />
+     		                
+        		                <div style="padding-top:4px;">
+        		                    <asp:Label ID="lblhead" runat="server" Text="Cebu Head Office" Font-Bold="True" 
+                                        Font-Names="Arial" Font-Size="11px" ForeColor="Black"></asp:Label>
+        		                </div>
+    		              </div>
+    		          
+		                    
+    		             
+		              </div><%-- end of bottom logo div --%>
+                    
+                   
+    		       
+    		  
+          	      
+    	        </div>
+    		    
+		        <div id="spacer"></div>
+    		    
+		        <div style="margin-left:5px;" class="column2">
+			        <%--<img style="padding:20px 0 0 12px;"src="../../../images/divider.jpg" alt="" width="450" height="9" /><br /> --%>
+			        <br />
+                        <div style="margin-left:10px;" class="style1">
+                        <asp:ContentPlaceHolder runat="server" ID="contentlabel"></asp:ContentPlaceHolder>
+                        </div>
+          
+                     
+                        <div class="divider"><asp:Image ID="Image14" runat="server" 
+                                ImageUrl="~/images/divider.jpg" Width="777px" /></div>
+                        <br />
+                        <div style="margin-left:10px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+
+                        </asp:ContentPlaceHolder>
+                        </div>
+                        
+                        
+                        
+                    <%-- if in case there is an additional div, just use this place
+                     --%>
+                   
+                    
+                   
+		        </div>
+    		 
+		        <%--<div style="background-image:url(../../../images/dividerFooter.jpg); width:626px; height:7px;float:left;"></div> --%>
+    	   <br />
+    		<div id="footers" style="height:5px;">
+                <asp:Image ID="imgdivider" runat="server" 
+                    ImageUrl="~/images/dividerFooter.jpg" Width="1019" /></div>
+            <div style="font-family:Arial; font-size:12px; font-weight:bold; height: 28px; text-align:center;">
+                @2011 M.Lhuillier Incorporation - All Rights Reserved
+                          </div> 
+		   
+		    </div><%-- end of content --%>
+
+		   
+          <div id="subMenu" 
+                style="width:400px; height:10px; position:absolute; padding:0 5px 5px 165px; top: 165px; left: 100px;">
+              <asp:HoverMenuExtender ID="HoverMenuExtender1" runat="server" TargetControlID="btnRecords" PopupControlID="recPanel" PopupPosition="Bottom">
+              </asp:HoverMenuExtender>
+                <asp:Panel ID="recPanel" runat="server" Width="151px" Height="130px" 
+                    Visible="true" BackColor="White" BorderColor="Black" BorderWidth="1px">
+           
+          <ul id="submenu1" style="font-family:Arial; font-size:small; list-style:none; width: 149px;">
+          <li class="effects"><a style="width:75px;" href="EmployeeProfileInformation.aspx">>> Profile</a></li>
+          <li><a style=" margin-left: 10px;"><asp:Image ID="imgbreak1" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a></li>
+          <li class="effects"><a style="width: 125px;" href="EmployeeEvaluation.aspx">>> Evaluation</a></li>
+          <li><a style=" margin-left: 10px;"><asp:Image ID="Image2" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a></li>
+          <li class="effects"><a style="width: 75px;" href="EmployeeTrainings.aspx">>> Training</a></li>
+          <li><a style="margin-left: 10px;"><asp:Image ID="Image3" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a></li>
+          <li class="effects"><a style="width: 125px;" href="EmployeeClearanceStatus1.aspx">>> Clearance</a></li>
+          <li><a style="margin-left: 10px;"><asp:Image ID="Image4" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a></li>
+          <li class="effects"><a style="width: 125px;"  href="EmployeePersonalInformationDocuments.aspx" >>> Documents</a></li>
+          </ul>
+          
+          <%--<ul id="submenu1" style="font-family:Arial; font-size:small; list-style:none; width: 149px;">
+          <li class="effects">
+          <a style="width:75px;" href="EmployeeProfileInformation.aspx">>> Profile</a>
+          <a style=" margin-left: 10px;"><asp:Image ID="imgdivprof" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a>
+          <a style="width: 125px;" href="EmployeeEvaluation.aspx">>> Evaluation</a>
+          <a style=" margin-left: 10px;"><asp:Image ID="imgdiveval" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a>
+          <a style="width: 75px;" href="EmployeeTrainings.aspx">>> Training</a>
+          <a style=" margin-left: 10px;"><asp:Image ID="imgdivtraining" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a>
+          <a style="width: 125px;" href="EmployeeClearanceStatus1.aspx">>> Clearance</a>
+          <a style=" margin-left: 10px;"><asp:Image ID="imgdivclearance" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a>
+          <a style="width: 125px;"  href="EmployeePersonalInformationDocuments.aspx" >>> Documents</a>
+          </li>
+          </ul>--%>
+        
+          </asp:Panel>
+	    </div>
+	     <asp:HoverMenuExtender ID="payrollhover" runat="server" TargetControlID="btnpayroll" PopupControlID="payroll" PopupPosition="Bottom">
+              </asp:HoverMenuExtender>
+	    <div>
+	    <asp:Panel ID="payroll" runat="server" Width="151px" Height="50px" 
+                    Visible="true" BackColor="White" BorderColor="Black" BorderWidth="1px">
+             
+          <ul style="font-family:Arial; font-size:small; list-style:none; width: 149px;">
+          <li class="effects"><a style="width:135px;" href="#">>> Employee Data</a></li>
+          <li><a style=" margin-left: 10px;"><asp:Image ID="Image1" runat="server" Height="6px" ImageUrl="~/images/dividerSubMenu.jpg" Width="130px" /></a></li>
+          <li class="effects"><a style="width: 75px;" href="#">>> Forms</a></li>
+          </ul>
+        
+          </asp:Panel>
+          </div>
+	  </div>
+	</form>
+
+</body>
+</html>

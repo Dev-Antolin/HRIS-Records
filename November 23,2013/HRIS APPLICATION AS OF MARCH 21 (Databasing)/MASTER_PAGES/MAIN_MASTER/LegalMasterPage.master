@@ -1,0 +1,257 @@
+﻿<%@ Master Language="VB" CodeFile="LegalMasterPage.master.vb" Inherits="MasterPage"%>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HR RECORD Master Page</title>
+
+    
+   <script src="../../../js/sitemasterpage.js" type="text/javascript"></script>
+
+    <script src="../../../js/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+    <script src="../../../js/jquery.jclock.js" type="text/javascript"></script>
+
+
+    <link href="../../../CSS_FILES/style.css" rel="stylesheet" type="text/css" />
+    <%-- start of clock from jerson
+<script type="text/javascript">
+
+    //showDiv
+	jQuery(document).ready(function(){
+		jQuery("#subMenu1").hide();
+	});
+	
+	
+	var flgShow=false;
+	function showDiv(id){
+			//$("#p1").replaceWith("Hide");
+			if(!flgShow){
+				$("#"+id).show();
+				flgShow=true;
+			}
+			else{
+				$("#"+id).hide();
+				flgShow=false;
+			}
+	}
+	
+		function hideDiv(id){	
+			//$("#p1").replaceWith("Hide");
+			$("#"+id).hide();	
+	}
+	
+	//clock
+	 $(function($) {
+            var options1 = {
+                format: '%I:%M:%S %P' // 12-hour
+            }
+            $('#jclock1').jclock(options1);
+
+
+            var options2 = {
+                format: '%a %b %d, %Y' //date
+            }
+            $('#jclock2').jclock(options2);
+
+            //move to next textbox or textarea using enter key    
+            $('input:text:first').focus();
+            var $inp = $('.WriteBackColor');
+            $inp.bind('keydown', function(e) {
+                //var key = (e.keyCode ? e.keyCode : e.charCode);
+                var key = e.which;
+                if ((key == 13) || (key == 9)) {
+                    e.preventDefault();
+                    var nxtIdx = $inp.index(this) + 1;
+                    $(".WriteBackColor:eq(" + nxtIdx + ")").focus();
+                }
+            });
+        });  
+
+</script>
+          end of clock from jerson      --%>
+</head>
+<body>
+
+        <form style="margin:0 auto; width: 1022px;" id="form1" runat="server">
+        
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div id="wrapper" style="width:1022px;">
+            <div id="header">
+            
+                    <div style="float:right; width:250px;height:20px; margin-top:70px; font-weight:bold; font-family: Arial;"><%-- top label--%>
+                        <div style="padding-top:6px; position: absolute; font-size: .7em; margin-top:3px;">
+                            <asp:Label ID="lblWelcomeMod" runat="server" Text="Welcome" Font-Size="Medium"></asp:Label>
+
+                        </div>
+                         <div style="position:absolute; float:left; margin-left:110px; margin-top:8px;">
+                                <a style="color:Blue; font-size: .9em;" href="#">Account</a>
+                         </div>
+                     
+                     
+                        <div style="z-index: 1; position:absolute; left:950px; padding-top:9px;">
+                            <asp:Image ID="Image13" runat="server" Height="17px" 
+		                          ImageUrl="~/images/top divider.png" Width="2px" />   
+                        </div>
+                        
+                         <div style="position:absolute; float:left; margin:8px 0 0 188px; top: 70px;">
+                                <a style="color:Blue; font-size: .9em;" href="#">Logout</a>
+                         </div>
+                    
+        
+                    </div><%-- end of top label--%>
+                    <br />
+                    <br />
+                <ul style="margin-top:-0px;">
+				    <li style="margin-left:115px; height:28px; width:129px;"><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/disemployee.jpg" /></li>
+				    <li><asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/dismanager.jpg" /></li>
+				    <li><asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/dishrmd.jpg" /></li>
+				    <li><asp:ImageButton ID="btnLegal" runat="server" ImageUrl="~/images/btnMenuLegal.jpg" /></li>
+				    <%--<li class="actives"><a style="color:White" href="#">Legal</a></li>--%> 
+			    </ul>
+            </div>
+            
+            <div id="mainMenu"> 
+			    <ul style="margin-top:0px; margin-left:100px;">
+			        <li class="button">
+                        <asp:ImageButton ID="btnRecords" runat="server" 
+                        ImageUrl="~/images/recordsdisable.jpg" /></li>
+                    <li class="button">
+                        <asp:ImageButton ID="btnDiscipline" runat="server" 
+                            ImageUrl="~/images/btn3Hover.jpg" /></li>
+                    <li class="button">
+                        <asp:ImageButton ID="btnERec" runat="server" 
+                            ImageUrl="~/images/e-rec.png" /></li>	      
+			        <li class="button">
+                        <asp:ImageButton ID="btnERecruitment" runat="server" 
+                        ImageUrl="~/images/admindisabled.jpg" /></li>
+			    </ul>
+		    </div>
+           
+            <div id="content"><%-- content --%>
+                <div style="margin-left:3px;" class="column">
+                     <%-- end of Employee Data --%>
+    	
+		            <%-- end of Reports image --%> 
+    		          
+		              <%-- end of Reports sub menu anchor--%> 
+    		 		 
+		 		      <div style="padding:10px 0 0 3px; height: 388px;"><%-- Alerts image --%>
+		 		             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">  
+
+                        </asp:ContentPlaceHolder>   		       
+		              </div><%-- end of Alerts image--%>
+    		          
+    		   		          
+		              <div style="margin-left:2px; padding:15px 0 10px 0;"><%--divider for bottom--%>
+		 		 	        <asp:Image ID="Image9" runat="server" ImageUrl="~/images/divider3.png" 
+                                 Height="1.5px" Width="198px" />
+		              </div>  
+    		          		          
+		              <div style=" margin-left:2px;padding:5px 0 1px 2px; width:200px; font-size:.8em; height:71px; position:relative;"><%-- bottom logo div --%>
+    		              
+    		              <div style="width:189px; height:21px;"><%-- calendar div--%>
+        		             <asp:Image style="float:left; margin:0 9px 0 2px;" ID="Image10" runat="server" ImageUrl="~/Images/calendar.PNG" />
+        		            
+        		             <div id="jclock2" style="width:180px; margin-left:28px; height:21px;">
+        		             <asp:Label runat="server" Font-Names="arial" Font-Size="11px" ID="lbltime2" Width="168px"></asp:Label>
+        		             </div>
+    		              </div><%-- end of calendar div --%>
+        		          
+        		          <div style="width:198px; height:21px; margin-top:2px;">
+        		                <asp:Image style="float:left; margin-right:7px;" ID="Image11" runat="server" ImageUrl="~/Images/clock.PNG" />
+     		                
+        		                <div id="jclock1" style="padding-top:3px; width:197px; height:21px; color:Black; ">
+        		                 
+        		                   <script type="text/javascript">
+
+                                    function ShowTime()
+	                                       {
+
+                                               	var dt = new Date();
+                                            	document.getElementById("<%= txttime.ClientID %>").value = dt.toLocaleTimeString();
+                                              	window.setTimeout("ShowTime()", 1000);
+                                           }  
+                                    </script>
+
+                                    <asp:TextBox ID="txttime" runat="server" BackColor="#F1EFEF" BorderWidth="0px" Font-Names="Arial" Enabled="false"
+	                                        Font-Size="11px" ForeColor="Black" Font-Bold="True">
+                                    </asp:TextBox>
+
+
+                                    <script type="text/javascript">
+                                      // a startup script to put everything in motion
+                                      window.setTimeout("ShowTime()", 1000);
+                                    </script>
+        		                
+        		                </div>
+    		              </div>
+    		              
+    		              <div style="width:193px; height:21px; margin-top:2px;">
+        		                <asp:Image style="float:left; margin-right:5px;" ID="Image12" runat="server" ImageUrl="~/Images/home.PNG" />
+     		                
+        		                <div style="padding-top:4px;">
+        		                    <asp:Label ID="Label3" Font-Size="11px" runat="server" Text="Cebu Head Office"></asp:Label>
+        		                </div>
+    		              </div>
+    		          
+		                    
+    		             
+		              </div><%-- end of bottom logo div --%>
+                    
+                   
+    		       
+    		  
+          	      
+    	        </div>
+    		    
+		        <div id="spacer"></div>
+    		    
+		        <div style="margin-left:5px;" class="column2">
+			        <%--<img style="padding:20px 0 0 12px;"src="../../../images/divider.jpg" alt="" width="450" height="9" /><br /> --%>
+                       <br />
+                        <div style="width:100%; margin-left:10px;">
+                        <asp:ContentPlaceHolder runat="server" ID="contentlabel"></asp:ContentPlaceHolder>
+                        </div>
+                     
+                        <div class="divider"><asp:Image ID="Image14" runat="server" 
+                                ImageUrl="~/images/divider.jpg" Width="777px" /></div>
+                        <br />
+                        <div style="width:99%; margin-left:10px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+
+                        </asp:ContentPlaceHolder>
+                        </div>
+                        
+                        
+                    <%-- if in case there is an additional div, just use this place
+                    
+                    
+                    
+                    --%>
+		        </div>
+    		 
+		        <%--<div style="background-image:url(../../../images/dividerFooter.jpg); width:626px; height:7px;float:left;"></div> --%>
+    	   <br />
+    		<div id="footers">
+                <asp:ImageButton ID="ImageButton1" runat="server" 
+                    ImageUrl="~/images/dividerFooter.jpg" Width="1019" /></div>
+            <div style="font-family:Arial; font-size:12px; font-weight:bold; text-align:center; height: 17px;">
+                @2011 M.Lhuillier Incorporation - All Rights Reserved
+                          </div> 
+		   
+		    </div><%-- end of content --%>
+
+		   
+          <div id="subMenu" 
+                style="width:400px; height:10px; position:absolute; padding:0 5px 5px 165px; top: 173px; left: 4px;">
+	    </div>
+	  </div>
+	</form>
+
+</body>
+</html>

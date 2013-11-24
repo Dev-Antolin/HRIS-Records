@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HRIS APPLICATION AS OF MARCH 21 (Databasing)", ".", "{37DDBB02-5603-4BC9-96C0-EF1FD4F08620}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/HRIS APPLICATION AS OF MARCH 21 (Databasing)"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\HRIS APPLICATION AS OF MARCH 21 (Databasing)\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\HRIS APPLICATION AS OF MARCH 21 (Databasing)\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/HRIS APPLICATION AS OF MARCH 21 (Databasing)"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\HRIS APPLICATION AS OF MARCH 21 (Databasing)\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\HRIS APPLICATION AS OF MARCH 21 (Databasing)\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52227"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37DDBB02-5603-4BC9-96C0-EF1FD4F08620}.Debug|.NET.ActiveCfg = Debug|.NET
+		{37DDBB02-5603-4BC9-96C0-EF1FD4F08620}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

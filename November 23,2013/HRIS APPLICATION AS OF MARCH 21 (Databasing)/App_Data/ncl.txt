@@ -1,0 +1,13 @@
+ <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <div style=" width:160px; height:350px; background-color: #E1E1DA ; margin-top:0px;">   
+            <div style="margin-top:40px; margin-left:10px; width:160; height:20px; float: left;" class="">
+                <asp:LinkButton ID="ApproveButton" runat="server" Text="&gt; Approved Loan" 
+                    ForeColor="black"></asp:LinkButton>
+            </div>
+             <div style=" margin-left:10px; margin-top:10px; width:160; height:20px; float: left;">
+                <asp:LinkButton ID="DisApprovedButton" runat="server" 
+                     Text="&gt; DisAppproved Loan" ForeColor="black"></asp:LinkButton>
+            </div>
+        </div>
+        
+    </asp:Content>
